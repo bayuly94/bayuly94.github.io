@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bayu Lukman Yusuf | Flutter &amp; Full Stack Developer</title>
+    <meta
+      name="description"
+      content="Profil dan portofolio profesional Bayu Lukman Yusuf, Software Engineer berpengalaman dalam Mobile App Development (Flutter, Dart) dan Web Backend (Laravel, Golang, Next.js)."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      (function () {
+        try {
+          var saved = localStorage.getItem("profile-theme");
+          var prefersDark =
+            window.matchMedia &&
+            window.matchMedia("(prefers-color-scheme: dark)").matches;
+          var theme = saved === "light" || saved === "dark"
+            ? saved
+            : prefersDark
+            ? "dark"
+            : "light";
+          document.documentElement.setAttribute("data-theme", theme);
+        } catch (e) {
+          document.documentElement.setAttribute("data-theme", "dark");
+        }
+      })();
+    </script>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Lewati ke konten utama</a>
+
+    <header class="site-header" id="top">
+      <div class="container header-inner">
+        <a class="brand" href="#about" aria-label="Beranda Profil Bayu">
+          <span class="brand-mark" aria-hidden="true">B</span>
+          <span class="brand-text">BAYU</span>
+        </a>
+
+        <nav class="main-nav" id="main-nav" aria-label="Navigasi utama">
+          <ul class="nav-list">
+            <li><a class="nav-link" href="#about">Tentang</a></li>
+            <li><a class="nav-link" href="#services">Layanan</a></li>
+            <li><a class="nav-link" href="#portfolio">Portofolio</a></li>
+            <li><a class="nav-link" href="#awards">Penghargaan</a></li>
+            <li><a class="nav-link" href="#summary">Pengalaman</a></li>
+            <li><a class="nav-link" href="#contact">Kontak</a></li>
+          </ul>
+        </nav>
+
+        <div class="header-actions">
+          <button
+            type="button"
+            class="icon-btn theme-toggle"
+            id="theme-toggle"
+            aria-label="Ubah ke mode terang"
+            aria-pressed="false"
+            title="Ganti tema gelap/terang"
+          >
+            <svg
+              class="icon-sun"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <circle cx="12" cy="12" r="4"></circle>
+              <path d="M12 2v2"></path>
+              <path d="M12 20v2"></path>
+              <path d="m4.93 4.93 1.41 1.41"></path>
+              <path d="m17.66 17.66 1.41 1.41"></path>
+              <path d="M2 12h2"></path>
+              <path d="M20 12h2"></path>
+              <path d="m6.34 17.66-1.41 1.41"></path>
+              <path d="m19.07 4.93-1.41 1.41"></path>
+            </svg>
+            <svg
+              class="icon-moon"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+            </svg>
+            <span class="theme-label">Mode</span>
+          </button>
+
+          <button
+            type="button"
+            class="icon-btn menu-toggle"
+            id="menu-toggle"
+            aria-label="Buka menu navigasi"
+            aria-expanded="false"
+            aria-controls="mobile-drawer"
+          >
+            <svg
+              width="22"
+              height="22"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <line x1="4" y1="6" x2="20" y2="6"></line>
+              <line x1="4" y1="12" x2="20" y2="12"></line>
+              <line x1="4" y1="18" x2="20" y2="18"></line>
+            </svg>
+            <span class="menu-label">Menu</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="mobile-drawer" id="mobile-drawer" hidden>
+        <nav aria-label="Navigasi seluler">
+          <ul class="mobile-nav-list">
+            <li><a class="mobile-nav-link" href="#about">Tentang</a></li>
+            <li><a class="mobile-nav-link" href="#services">Layanan</a></li>
+            <li><a class="mobile-nav-link" href="#portfolio">Portofolio</a></li>
+            <li><a class="mobile-nav-link" href="#awards">Penghargaan</a></li>
+            <li><a class="mobile-nav-link" href="#summary">Pengalaman</a></li>
+            <li><a class="mobile-nav-link" href="#contact">Kontak</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <div id="pdf-export-area">
+        <!-- HERO / ABOUT -->
+        <section id="about" class="hero-section">
+          <div class="container hero-grid">
+            <div class="hero-copy">
+              <p class="hero-greeting">Halo, saya</p>
+              <h1 class="hero-title">
+                Bayu Lukman <span class="accent-text">Yusuf</span>
+              </h1>
+              <p class="hero-role" id="role-text">
+                Flutter &amp; Mobile App Developer | Full Stack Engineer
+              </p>
+              <p class="hero-bio">
+                Software Engineer berpengalaman dalam pengembangan aplikasi mobile multiplatform (Flutter &amp; Dart) dan arsitektur sistem web/backend (PHP Laravel, Golang, Next.js). Lulusan S1 Teknik Informatika Institut Teknologi Telkom Purwokerto dengan rekam jejak merilis aplikasi di Google Play Store &amp; Apple App Store serta integrasi sistem pembayaran, kurir, dan video streaming.
+              </p>
+
+              <div class="tech-pills" aria-label="Teknologi utama">
+                <span class="tech-pill">Flutter</span>
+                <span class="tech-pill">Dart</span>
+                <span class="tech-pill">Laravel</span>
+                <span class="tech-pill">Golang</span>
+                <span class="tech-pill">Next.js</span>
+                <span class="tech-pill">PHP</span>
+                <span class="tech-pill">Node.js</span>
+                <span class="tech-pill">PostgreSQL</span>
+                <span class="tech-pill">MySQL</span>
+                <span class="tech-pill">Firebase</span>
+                <span class="tech-pill">Midtrans &amp; Xendit</span>
+                <span class="tech-pill">REST API</span>
+              </div>
+
+              <div class="hero-cta-group no-print">
+                <a href="#portfolio" class="btn btn-primary">Lihat Portofolio</a>
+                <a href="https://www.linkedin.com/in/bayuly94/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Hubungi Saya</a>
+              </div>
+
+              <div class="social-links" aria-label="Tautan sosial dan kontak">
+                <a
+                  href="https://www.linkedin.com/in/bayuly94/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Profil LinkedIn"
+                >
+                  LinkedIn
+                </a>
+                <a
+                  href="https://github.com/bayuly94"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Profil GitHub"
+                >
+                  GitHub
+                </a>
+                <!-- Email dan WhatsApp disembunyikan (hide) -->
+                <!--
+                <a
+                  href="https://wa.me/6289620412172"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="WhatsApp"
+                >
+                  WhatsApp
+                </a>
+                <a href="mailto:bayuly94@gmail.com" aria-label="Kirim Email">
+                  bayuly94@gmail.com
+                </a>
+                -->
+              </div>
+            </div>
+
+            <div class="hero-visual">
+              <div class="avatar-frame" role="img" aria-label="Foto Profil Bayu Lukman Yusuf">
+                <img src="assets/images/profile/profile.webp" alt="Bayu Lukman Yusuf" />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SERVICES -->
+        <section id="services" class="section">
+          <div class="container">
+            <div class="section-header">
+              <p class="section-kicker">Keahlian &amp; Layanan</p>
+              <h2 class="section-title">Layanan &amp; Fokus Kerja</h2>
+              <p class="section-desc">
+                Bidang keahlian rekayasa perangkat lunak yang saya tangani dari tahap konsep, perancangan arsitektur, hingga produksi siap rilis.
+              </p>
+            </div>
+
+            <div class="services-grid">
+              <article class="service-card service-featured">
+                <div class="service-meta">01 / Mobile</div>
+                <h3>Mobile App Development</h3>
+                <p>
+                  Membangun aplikasi lintas platform Android &amp; iOS berkualitas tinggi dengan Flutter dan Dart. Menitikberatkan pada arsitektur kode modular, state management (Provider/Bloc), penanganan offline-first, dan integrasi hardware (GPS, kamera).
+                </p>
+                <ul class="tag-list">
+                  <li>Flutter</li>
+                  <li>Dart</li>
+                  <li>Play Store &amp; App Store</li>
+                  <li>REST API</li>
+                </ul>
+              </article>
+
+              <article class="service-card">
+                <div class="service-meta">02 / Web &amp; Backend</div>
+                <h3>Web &amp; Backend Engineering</h3>
+                <p>
+                  Merancang arsitektur sistem backend andal, API skalabel, dan panel manajemen admin menggunakan PHP Laravel, Golang, dan Next.js dengan perancangan database relasional yang optimal.
+                </p>
+                <ul class="tag-list">
+                  <li>Laravel</li>
+                  <li>Golang</li>
+                  <li>Next.js</li>
+                  <li>PostgreSQL / MySQL</li>
+                </ul>
+              </article>
+
+              <article class="service-card">
+                <div class="service-meta">03 / Integrasi &amp; FinTech</div>
+                <h3>FinTech &amp; Integrasi Sistem</h3>
+                <p>
+                  Menghubungkan aplikasi dengan ekosistem pembayaran (Midtrans, Xendit), kurir instan on-demand (GoSend, GrabExpress), kompresi video adaptif HLS, serta sistem kasir POS &amp; CRM outlet.
+                </p>
+                <ul class="tag-list">
+                  <li>Midtrans / Xendit</li>
+                  <li>POS &amp; CRM</li>
+                  <li>HLS Video Streaming</li>
+                  <li>OpenStreetMap</li>
+                </ul>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- PORTFOLIO -->
+        <section id="portfolio" class="section">
+          <div class="container">
+            <div class="section-header">
+              <p class="section-kicker">Karya Pilihan</p>
+              <h2 class="section-title">Portofolio Proyek</h2>
+              <p class="section-desc">
+                Pilihan aplikasi mobile dan platform web yang telah saya kembangkan. Klik pada kartu proyek untuk melihat rincian arsitektur dan fitur lengkap.
+              </p>
+            </div>
+
+            <div
+              class="filter-tabs no-print"
+              role="tablist"
+              aria-label="Filter kategori portofolio"
+            >
+              <button
+                type="button"
+                class="tab-btn is-active"
+                role="tab"
+                aria-selected="true"
+                data-filter="all"
+                id="tab-all"
+              >
+                Semua (<span id="count-all">0</span>)
+              </button>
+              <button
+                type="button"
+                class="tab-btn"
+                role="tab"
+                aria-selected="false"
+                data-filter="mobile"
+                id="tab-mobile"
+              >
+                Mobile Apps (<span id="count-mobile">0</span>)
+              </button>
+              <button
+                type="button"
+                class="tab-btn"
+                role="tab"
+                aria-selected="false"
+                data-filter="web"
+                id="tab-web"
+              >
+                Website (<span id="count-web">0</span>)
+              </button>
+            </div>
+
+            <div
+              id="portfolio-status"
+              class="state-box"
+              role="status"
+              aria-live="polite"
+              hidden
+            ></div>
+
+            <div class="portfolio-grid" id="portfolio-grid"></div>
+          </div>
+        </section>
+
+
+        <!-- AWARDS & RECOGNITION -->
+        <section id="awards" class="section">
+          <div class="container">
+            <div class="section-header">
+              <p class="section-kicker">Prestasi &amp; Pengakuan</p>
+              <h2 class="section-title">Penghargaan &amp; Kompetisi</h2>
+              <p class="section-desc">
+                Pengakuan kompetensi rekayasa perangkat lunak dan kejuaraan pengembangan aplikasi mobile berskala nasional.
+              </p>
+            </div>
+
+            <div class="award-featured-card">
+              <div class="award-badge-ribbon">
+                <span class="award-badge-icon">🏆</span>
+                <span class="award-badge-text">Pemenang Utama / 1st Winner</span>
+              </div>
+
+              <div class="award-grid">
+                <div class="award-visual-col">
+                  <div class="award-image-frame" role="button" tabindex="0" aria-label="Lihat banner penghargaan ukuran penuh" id="award-banner-trigger">
+                    <img
+                      src="assets/images/awards/dicoding_beceer_award.webp"
+                      alt="Aplikasi Berbasis Flutter: Beceer sang Juara - Dicoding Indonesia"
+                      loading="lazy"
+                    />
+                    <div class="award-zoom-hint">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        <line x1="11" y1="8" x2="11" y2="14"></line>
+                        <line x1="8" y1="11" x2="14" y2="11"></line>
+                      </svg>
+                      <span>Perbesar Banner</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="award-content-col">
+                  <div class="award-meta-row">
+                    <span class="award-organizer">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                      </svg>
+                      Dicoding Indonesia (Google Authorized Partner)
+                    </span>
+                    <span class="award-date">Juni 2019</span>
+                  </div>
+
+                  <h3 class="award-title">
+                    Dicoding Challenge: Create Beautiful Apps using Flutter
+                  </h3>
+
+                  <p class="award-lead">
+                    Aplikasi <strong>Beceer</strong> (Belanja Kebutuhan Dapur &amp; Pasar Tradisional Purwokerto) dinobatkan sebagai <strong>Sang Juara</strong> setelah melalui seleksi ketat dewan juri kompetisi pengembangan aplikasi tingkat nasional.
+                  </p>
+
+                  <div class="award-quote-box">
+                    <p class="award-quote-text">
+                      “Selain UI yang menarik, Aplikasi sudah berfungsi secara maksimal. Tersedia di Playstore dan sudah memiliki ribuan user.”
+                    </p>
+                    <span class="award-quote-author">— Dewan Juri Dicoding Challenge</span>
+                  </div>
+
+                  <div class="award-highlights-grid">
+                    <div class="award-highlight-item">
+                      <span class="highlight-val">Juara 1</span>
+                      <span class="highlight-label">Tingkat Nasional</span>
+                    </div>
+                    <div class="award-highlight-item">
+                      <span class="highlight-val">Flutter &amp; Dart</span>
+                      <span class="highlight-label">Multiplatform SDK</span>
+                    </div>
+                    <div class="award-highlight-item">
+                      <span class="highlight-val">Ribuan User</span>
+                      <span class="highlight-label">Aktif di Play Store</span>
+                    </div>
+                    <div class="award-highlight-item">
+                      <span class="highlight-val">Pasar Rakyat</span>
+                      <span class="highlight-label">Pemberdayaan UMKM</span>
+                    </div>
+                  </div>
+
+                  <div class="award-actions-row no-print">
+                    <a
+                      href="https://www.dicoding.com/blog/aplikasi-berbasis-flutter-beceer-sang-juara/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="btn btn-primary btn-sm award-btn"
+                    >
+                      <span>Baca Liputan Resmi di Dicoding Blog</span>
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                        <polyline points="15 3 21 3 21 9"></polyline>
+                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                      </svg>
+                    </a>
+                    <button
+                      type="button"
+                      class="btn btn-secondary btn-sm"
+                      id="view-beceer-project-btn"
+                    >
+                      Buka Rincian Proyek Beceer
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- EXPERIENCE / EDUCATION SUMMARY -->
+        <section id="summary" class="section">
+          <div class="container">
+            <div class="section-header">
+              <p class="section-kicker">Ringkasan Karir</p>
+              <h2 class="section-title">Pengalaman &amp; Pendidikan</h2>
+            </div>
+
+            <div class="timeline-grid">
+              <div class="timeline-col">
+                <h3 class="timeline-heading">Pengalaman Kerja</h3>
+                
+                <article class="timeline-item">
+                  <span class="timeline-period">Juli 2026 - Sekarang</span>
+                  <h4>Software Engineer</h4>
+                  <p class="timeline-org">PT GARDANA DIGITAL KREATIF — Purwokerto</p>
+                  <p>
+                    Mengembangkan arsitektur aplikasi mobile dan web berstandar produksi dengan fokus pada performa serta skalabilitas sistem.
+                  </p>
+                </article>
+
+                <article class="timeline-item">
+                  <span class="timeline-period">Juni 2025 - Mei 2026 (1 tahun)</span>
+                  <h4>Fullstack Developer</h4>
+                  <p class="timeline-org">AsiaGolf — Jakarta, Indonesia</p>
+                  <p>
+                    Pengembangan aplikasi fullstack untuk ekosistem layanan golf terpadu dan manajemen operasional.
+                  </p>
+                </article>
+
+                <article class="timeline-item">
+                  <span class="timeline-period">Desember 2025 - Januari 2026</span>
+                  <h4>Full Stack Developer</h4>
+                  <p class="timeline-org">Dealaja — Yogyakarta, Indonesia</p>
+                  <p>
+                    Mengimplementasikan kompresi video MP4 ke HLS streaming, watermarking video branding otomatis, optimasi aset gambar, serta modul akun bisnis merchant.
+                  </p>
+                </article>
+
+                <article class="timeline-item">
+                  <span class="timeline-period">April 2025 - September 2025</span>
+                  <h4>Web Developer</h4>
+                  <p class="timeline-org">Nexusnesia Real Estate</p>
+                  <p>
+                    Membangun marketplace properti real estate jual/sewa multi-agen berbasis frontend Next.js dan backend Golang.
+                  </p>
+                </article>
+
+                <article class="timeline-item">
+                  <span class="timeline-period">November 2024 - Maret 2025</span>
+                  <h4>Mobile Developer</h4>
+                  <p class="timeline-org">HRIS Mobile Application</p>
+                  <p>
+                    Slicing desain dan integrasi API untuk modul absensi GPS &amp; selfie, pengajuan cuti, lembur, dan slip gaji digital.
+                  </p>
+                </article>
+
+                <article class="timeline-item">
+                  <span class="timeline-period">Agustus 2021 - Oktober 2023 (2+ tahun)</span>
+                  <h4>Software Developer</h4>
+                  <p class="timeline-org">PT WISATA NIAGA SEJAHTERA — Purwokerto</p>
+                  <p>
+                    Membangun aplikasi Mobile CRM &amp; POS (Android &amp; iOS) untuk outlet WN Cafe, Aftobar, dan Lobby Garden. Rilis resmi di Google Play Store &amp; Apple App Store, terintegrasi Midtrans, Xendit, GoSend, dan GrabExpress.
+                  </p>
+                </article>
+
+                <article class="timeline-item">
+                  <span class="timeline-period">2023 - 2024</span>
+                  <h4>Software Engineer</h4>
+                  <p class="timeline-org">Reksa Karya (BAKTI KOMINFO)</p>
+                  <p>
+                    Pengembangan aplikasi Sasaran Kinerja Pegawai (E-SKP) untuk BAKTI KOMINFO menggunakan framework Laravel.
+                  </p>
+                </article>
+              </div>
+
+              <div class="timeline-col">
+                <h3 class="timeline-heading">Pendidikan</h3>
+                
+                <article class="timeline-item">
+                  <span class="timeline-period">2013 - 2017</span>
+                  <h4>S1 Teknik Informatika (Bachelor of Informatics)</h4>
+                  <p class="timeline-org">Institut Teknologi Telkom Purwokerto</p>
+                  <p>
+                    Fokus pada Rekayasa Perangkat Lunak, Struktur Data, Arsitektur Sistem Komputer, Pemrograman Berorientasi Objek, dan Perancangan Basis Data.
+                  </p>
+                </article>
+
+                <article class="timeline-item">
+                  <span class="timeline-period">2010 - 2013</span>
+                  <h4>Rekayasa Perangkat Lunak (RPL)</h4>
+                  <p class="timeline-org">SMK Telkom Purwokerto</p>
+                  <p>
+                    Dasar keahlian rekayasa software, logika algoritma, dan perancangan aplikasi desktop/web.
+                  </p>
+                </article>
+
+                <article class="timeline-item" style="background: var(--surface-subtle); padding: 22px; border-radius: var(--radius-md); border: 0.5px solid var(--border);">
+                  <span class="timeline-period" style="color: var(--accent); font-weight: 700;">Keunggulan &amp; Ringkasan</span>
+                  <h4>Kualifikasi Utama</h4>
+                  <p style="margin-top: 8px; line-height: 1.6; font-size: 0.9rem;">
+                    • 6+ tahun pengalaman di industri software engineering.<br />
+                    • Rekam jejak aplikasi produksi di Play Store &amp; App Store.<br />
+                    • Spesialisasi Flutter, Dart, Laravel, Golang, dan REST API.<br />
+                    • Berdomisili di Purwokerto (Terbuka untuk Remote / Onsite).
+                  </p>
+                </article>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- CONTACT -->
+      <section id="contact" class="section no-print">
+        <div class="container contact-layout">
+          <div class="contact-info">
+            <p class="section-kicker">Kontak Langsung</p>
+            <h2 class="section-title">Mari Terhubung &amp; Berkolaborasi</h2>
+            <p class="section-desc">
+              Tertarik mendiskusikan peluang kerja remote/onsite, proyek mobile Flutter, atau rekayasa sistem full stack? Jangan ragu untuk menghubungi saya.
+            </p>
+            <dl class="contact-details">
+              <!-- Email dan Nomor Telepon disembunyikan (hide) -->
+              <!--
+              <div>
+                <dt>Email</dt>
+                <dd><a href="mailto:bayuly94@gmail.com">bayuly94@gmail.com</a></dd>
+              </div>
+              <div>
+                <dt>WhatsApp / Telepon</dt>
+                <dd><a href="https://wa.me/6289620412172" target="_blank" rel="noopener noreferrer">+62 896-2041-2172</a></dd>
+              </div>
+              -->
+              <div>
+                <dt>LinkedIn</dt>
+                <dd><a href="https://www.linkedin.com/in/bayuly94/" target="_blank" rel="noopener noreferrer">linkedin.com/in/bayuly94</a></dd>
+              </div>
+              <div>
+                <dt>Lokasi</dt>
+                <dd>Purwokerto, Jawa Tengah, Indonesia</dd>
+              </div>
+            </dl>
+          </div>
+
+          <div class="contact-form" style="justify-content: center; align-items: center; text-align: center; padding: 48px 32px;">
+            <div style="width: 56px; height: 56px; border-radius: 50%; background: var(--accent-soft); display: flex; align-items: center; justify-content: center; margin-bottom: 8px; color: var(--accent);">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.45c-.96 0-1.74.77-1.74 1.73a1.74 1.74 0 0 0 1.74 1.74 1.74 1.74 0 0 0 1.74-1.74c0-.96-.78-1.73-1.74-1.73Z"/>
+              </svg>
+            </div>
+            <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 8px;">Terhubung via LinkedIn</h3>
+            <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; margin-bottom: 24px; max-width: 360px;">
+              Silakan hubungi atau kirim pesan langsung melalui profil LinkedIn saya untuk peluang kerja atau kolaborasi proyek.
+            </p>
+            <a
+              href="https://www.linkedin.com/in/bayuly94/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-primary"
+              style="display: inline-flex; align-items: center; gap: 8px; width: 100%; justify-content: center; padding: 14px 20px; text-decoration: none;"
+            >
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.45c-.96 0-1.74.77-1.74 1.73a1.74 1.74 0 0 0 1.74 1.74 1.74 1.74 0 0 0 1.74-1.74c0-.96-.78-1.73-1.74-1.73Z"/>
+              </svg>
+              <span>Buka Profil LinkedIn</span>
+            </a>
+          </div>
+
+          <!-- Form kontak sebelumnya disembunyikan (hide) -->
+          <!--
+          <form class="contact-form" id="contact-form" novalidate style="display: none;">
+            <div class="form-field">
+              <label for="sender-name">Nama Lengkap</label>
+              <input
+                type="text"
+                id="sender-name"
+                name="name"
+                placeholder="Nama Anda"
+                autocomplete="name"
+                required
+              />
+            </div>
+
+            <div class="form-field">
+              <label for="sender-email">Alamat Email</label>
+              <input
+                type="email"
+                id="sender-email"
+                name="email"
+                placeholder="email@anda.com"
+                autocomplete="email"
+                required
+              />
+            </div>
+
+            <div class="form-field">
+              <label for="sender-message">Pesan</label>
+              <textarea
+                id="sender-message"
+                name="message"
+                rows="4"
+                placeholder="Ceritakan penawaran peluang kerja atau kebutuhan proyek Anda..."
+                required
+              ></textarea>
+            </div>
+
+            <div
+              id="form-feedback"
+              class="form-feedback"
+              role="status"
+              aria-live="polite"
+              hidden
+            ></div>
+
+            <button type="submit" class="btn btn-primary">Kirim Pesan Email</button>
+            <a href="https://wa.me/6289620412172?text=Halo%20Bayu,%20saya%20melihat%20profil%20dan%20portofolio%20Anda." target="_blank" rel="noopener noreferrer" class="btn btn-secondary mt-2" style="text-align: center; text-decoration: none;">
+              Chat via WhatsApp Langsung
+            </a>
+          </form>
+          -->
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer no-print">
+      <div class="container footer-inner">
+        <p>&copy; <span id="year"></span> Bayu Lukman Yusuf. All rights reserved.</p>
+        <a href="#top" class="back-to-top">Kembali ke atas</a>
+      </div>
+    </footer>
+
+    <!-- iOS PROJECT DETAIL MODAL SHEET -->
+    <div
+      id="project-modal"
+      class="modal-backdrop no-print"
+      hidden
+      aria-hidden="true"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modal-title"
+    >
+      <div class="modal-card">
+        <button
+          type="button"
+          class="modal-close-btn"
+          id="modal-close-btn"
+          aria-label="Tutup jendela detail"
+        >
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+        <div class="modal-media" id="modal-media" role="button" tabindex="0" aria-label="Klik untuk memperbesar gambar">
+          <span class="project-category modal-category" id="modal-category">Mobile</span>
+          <img id="modal-image" src="" alt="" />
+          <div class="modal-media-overlay">
+            <button
+              type="button"
+              class="media-zoom-btn"
+              id="modal-zoom-trigger"
+              aria-label="Perbesar gambar layar penuh"
+            >
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                <line x1="11" y1="8" x2="11" y2="14"></line>
+                <line x1="8" y1="11" x2="14" y2="11"></line>
+              </svg>
+              <span>Klik untuk Zoom Layar Penuh</span>
+            </button>
+          </div>
+        </div>
+        <div class="modal-body">
+          <div class="modal-gallery-row" id="modal-gallery-row" hidden></div>
+          <div class="modal-meta-row">
+            <span class="modal-platform" id="modal-platform">Platform: Mobile (Android &amp; iOS)</span>
+          </div>
+          <h2 class="modal-title" id="modal-title">Judul Proyek</h2>
+          <p class="modal-desc" id="modal-desc">Deskripsi lengkap proyek...</p>
+
+          <div class="modal-links-section" id="modal-links-section">
+            <h4 class="modal-subtitle">Tautan Resmi &amp; Unduh Aplikasi:</h4>
+            <div class="modal-links-row" id="modal-links-row"></div>
+          </div>
+
+          <div class="modal-features-section" id="modal-features-section">
+            <h4 class="modal-subtitle">Fitur &amp; Tanggung Jawab Utama:</h4>
+            <ul class="modal-features-list" id="modal-features-list"></ul>
+          </div>
+
+          <div class="modal-tags-section">
+            <h4 class="modal-subtitle">Teknologi Digunakan:</h4>
+            <ul class="tag-list" id="modal-tags"></ul>
+          </div>
+
+          <div class="modal-actions" id="modal-actions">
+            <button type="button" class="btn btn-secondary" id="modal-dismiss-btn">Tutup</button>
+            <a
+              href="https://www.linkedin.com/in/bayuly94/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-primary"
+              id="modal-contact-link"
+            >
+              Hubungi via LinkedIn
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- iOS Interactive Image Zoom Lightbox -->
+    <div
+      id="image-zoom-lightbox"
+      class="zoom-lightbox"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Penampil Gambar Resolusi Penuh"
+      hidden
+    >
+      <div class="zoom-lightbox-backdrop" id="zoom-lightbox-backdrop"></div>
+      
+      <header class="zoom-lightbox-bar">
+        <div class="zoom-lightbox-title" id="zoom-lightbox-title">Pratinjau Gambar</div>
+        <div class="zoom-controls">
+          <button type="button" class="zoom-ctrl-btn" id="zoom-out-btn" aria-label="Perkecil (-)">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              <line x1="8" y1="11" x2="14" y2="11"></line>
+            </svg>
+          </button>
+          <span class="zoom-level-badge" id="zoom-level-badge">100%</span>
+          <button type="button" class="zoom-ctrl-btn" id="zoom-in-btn" aria-label="Perbesar (+)">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              <line x1="11" y1="8" x2="11" y2="14"></line>
+              <line x1="8" y1="11" x2="14" y2="11"></line>
+            </svg>
+          </button>
+          <button type="button" class="zoom-ctrl-btn zoom-btn-text" id="zoom-fit-btn" aria-label="Sesuaikan layar">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="4 14 10 14 10 20"></polyline>
+              <polyline points="20 10 14 10 14 4"></polyline>
+              <polyline points="14 20 14 14 20 14"></polyline>
+              <polyline points="10 4 10 10 4 10"></polyline>
+            </svg>
+            <span>Fit Layar</span>
+          </button>
+          <button type="button" class="zoom-ctrl-btn zoom-btn-text" id="zoom-reset-btn" aria-label="Ukuran asli">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M15 3h6v6"></path>
+              <path d="M9 21H3v-6"></path>
+              <path d="M21 3l-7 7"></path>
+              <path d="M3 21l7-7"></path>
+            </svg>
+            <span>Ukuran Asli</span>
+          </button>
+          <button type="button" class="zoom-ctrl-btn zoom-close-btn" id="zoom-close-btn" aria-label="Tutup zoom (Esc)">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+      </header>
+
+      <div class="zoom-stage" id="zoom-stage">
+        <div class="zoom-pan-container" id="zoom-pan-container">
+          <img id="zoom-target-image" src="" alt="Zoom preview" draggable="false" />
+        </div>
+      </div>
+
+      <footer class="zoom-lightbox-hint">
+        <span>Gunakan tombol zoom, klik gambar, atau scroll roda mouse untuk memperbesar • Geser gambar saat diperbesar</span>
+      </footer>
+    </div>
+
+    <div
+      id="toast"
+      class="toast no-print"
+      role="status"
+      aria-live="polite"
+      hidden
+    ></div>
+
+    <script src="assets/js/app.js" defer></script>
+  </body>
+</html>

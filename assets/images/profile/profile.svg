@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#141c2b"/>
+      <stop offset="50%" stop-color="#0b0f16"/>
+      <stop offset="100%" stop-color="#05070a"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f5a524"/>
+      <stop offset="100%" stop-color="#f97316"/>
+    </linearGradient>
+    <linearGradient id="glowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#818cf8"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="12" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background circle -->
+  <circle cx="200" cy="200" r="195" fill="url(#bgGrad)" stroke="rgba(245, 165, 36, 0.3)" stroke-width="3" />
+  
+  <!-- Outer Tech Circuit Lines -->
+  <circle cx="200" cy="200" r="170" fill="none" stroke="rgba(245, 165, 36, 0.15)" stroke-width="1.5" stroke-dasharray="8 6" />
+  <circle cx="200" cy="200" r="150" fill="none" stroke="rgba(56, 189, 248, 0.2)" stroke-width="1.5" stroke-dasharray="14 10" />
+
+  <!-- Developer Silhouette with Modern Tech aesthetic -->
+  <g transform="translate(0, 10)">
+    <!-- Shoulders / Hoodie -->
+    <path d="M 100 340 C 100 270, 140 250, 200 250 C 260 250, 300 270, 300 340 Z" fill="#1e293b" />
+    <path d="M 120 340 C 120 280, 150 262, 200 262 C 250 262, 280 280, 280 340 Z" fill="#0f172a" />
+    <!-- Collar / Hoodie V-neck -->
+    <path d="M 175 262 L 200 295 L 225 262 Z" fill="#334155" />
+    <!-- Neck -->
+    <rect x="182" y="210" width="36" height="40" rx="6" fill="#f8fafc" opacity="0.9" />
+
+    <!-- Head -->
+    <ellipse cx="200" cy="170" rx="52" ry="58" fill="#f1f5f9" />
+
+    <!-- Modern Haircut -->
+    <path d="M 148 165 C 145 130, 165 105, 200 105 C 235 105, 255 130, 252 165 C 245 140, 225 125, 200 125 C 175 125, 155 140, 148 165 Z" fill="#0f172a" />
+    
+    <!-- Modern Tech Glasses -->
+    <rect x="160" y="160" width="32" height="20" rx="5" fill="none" stroke="url(#accentGrad)" stroke-width="3" />
+    <rect x="208" y="160" width="32" height="20" rx="5" fill="none" stroke="url(#accentGrad)" stroke-width="3" />
+    <line x1="192" y1="170" x2="208" y2="170" stroke="url(#accentGrad)" stroke-width="3" />
+    <!-- Glass reflection -->
+    <line x1="164" y1="176" x2="174" y2="164" stroke="#fff" stroke-width="1.5" opacity="0.6" />
+    <line x1="212" y1="176" x2="222" y2="164" stroke="#fff" stroke-width="1.5" opacity="0.6" />
+
+    <!-- Friendly smile -->
+    <path d="M 186 200 Q 200 210 214 200" fill="none" stroke="#64748b" stroke-width="2.5" stroke-linecap="round" />
+  </g>
+
+  <!-- Glowing Tech Badge / Flutter Logo watermark -->
+  <g transform="translate(270, 270) scale(0.6)" filter="url(#glow)">
+    <circle cx="50" cy="50" r="45" fill="#0f172a" stroke="url(#accentGrad)" stroke-width="3" />
+    <!-- Flutter bird icon inside badge -->
+    <polygon points="52,22 30,44 42,56 76,22" fill="#54c5f8"/>
+    <polygon points="52,52 30,74 42,86 76,52" fill="#29b6f6"/>
+    <polygon points="42,86 54,74 66,86 54,98" fill="#01579b"/>
+    <polygon points="54,74 42,56 66,56 66,74" fill="#0288d1"/>
+  </g>
+</svg>
