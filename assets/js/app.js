@@ -409,8 +409,14 @@
     "category": "web",
     "categoryLabel": "Website",
     "platform": "Web App (Next.js & Golang)",
-    "thumbnail": null,
-    "fullImage": null,
+    "thumbnail": "assets/images/portfolios/nexusnesia.png",
+    "fullImage": "assets/images/portfolios/nexusnesia_full.png",
+    "gallery": [
+      "assets/images/portfolios/nexusnesia.png",
+      "assets/images/portfolios/nexusnesia_1.png",
+      "assets/images/portfolios/nexusnesia_2.png",
+      "assets/images/portfolios/nexusnesia_3.png"
+    ],
     "webLink": null,
     "playStoreLink": null,
     "appStoreLink": null,
