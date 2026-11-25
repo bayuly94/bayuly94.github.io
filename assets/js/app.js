@@ -176,7 +176,43 @@
     ],
     "link": "https://apps.apple.com/us/app/asiagolf-points/id6633417013"
   },
-
+  {
+    "title": "Lalong Payment - Agen PPOB & FinTech",
+    "category": "mobile",
+    "categoryLabel": "Mobile & FinTech",
+    "platform": "Android (Flutter) & Web Admin (Laravel Octane + Inertia React)",
+    "thumbnail": "assets/images/portfolios/lalong.png",
+    "fullImage": "assets/images/portfolios/lalong_full.png",
+    "gallery": [
+      "assets/images/portfolios/lalong.png",
+      "assets/images/portfolios/lalong_1.png",
+      "assets/images/portfolios/lalong_2.png"
+    ],
+    "webLink": null,
+    "playStoreLink": null,
+    "appStoreLink": null,
+    "description": "Ekosistem aplikasi mobile keagenan PPOB dan pembayaran digital berbasis Flutter: pendaftaran agen, saldo aktif, downline kemitraan, transaksi pulsa/data, dan integrasi biller H2H.",
+    "fullDesc": "Aplikasi mobile resmi Lalong Payment untuk pendaftaran dan operasional agen PPOB (Payment Point Online Bank). Mengintegrasikan arsitektur berkinerja tinggi antara mobile client Flutter dan backend Laravel Octane dengan panel web admin Inertia.js React. Mendukung alur bisnis lengkap mulai dari registrasi agen baru, manajemen saldo dompet digital & mutasi real-time, hierarki downline kemitraan, pemesanan kuota data/pulsa/token listrik multi-operator via biller H2H, serta laporan rekapitulasi transaksi otomatis.",
+    "features": [
+      "Aplikasi Mobile Agen PPOB berbasis Flutter untuk Android.",
+      "Sistem pendaftaran agen baru dan manajemen kemitraan jaringan downline.",
+      "Saldo aktif dompet digital, riwayat transaksi, dan mutasi saldo real-time.",
+      "Fitur transaksi pulsa reguler, promo paket data, token listrik, dompet digital, voucher, dan paket TV.",
+      "Integrasi API biller H2H untuk validasi ketersediaan dan eksekusi transaksi otomatis.",
+      "Panel admin berbasis Laravel Octane dan Inertia.js React untuk pengelolaan harga dan produk."
+    ],
+    "tags": [
+      "Flutter",
+      "Dart",
+      "Laravel Octane",
+      "Inertia.js",
+      "React.js",
+      "PPOB & FinTech",
+      "Biller H2H",
+      "REST API"
+    ],
+    "link": null
+  },
   {
     "title": "invme.id - Digital Wedding Invitation Platform",
     "category": "web",
