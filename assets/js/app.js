@@ -733,7 +733,9 @@
       if (outBtn) outBtn.addEventListener("click", function () { self.zoom(-0.3); });
       if (fitBtn) fitBtn.addEventListener("click", function () { self.fitToScreen(); });
       if (resetBtn) resetBtn.addEventListener("click", function () { self.resetZoom(); });
+      var floatCloseBtn = document.getElementById("zoom-floating-close-btn");
       if (closeBtn) closeBtn.addEventListener("click", function () { self.close(); });
+      if (floatCloseBtn) floatCloseBtn.addEventListener("click", function () { self.close(); });
       if (backdrop) backdrop.addEventListener("click", function () { self.close(); });
 
       // Click on image toggles between fit (1.0x) and zoom (2.2x)
