@@ -1184,17 +1184,28 @@
         body.className = "project-body";
 
         var title = document.createElement("h3");
-        var titleLink = document.createElement("a");
-        titleLink.href = item.webLink || "https://bayuly94.github.io";
-        titleLink.target = "_blank";
-        titleLink.rel = "noopener noreferrer";
-        titleLink.style.color = "inherit";
-        titleLink.style.textDecoration = "none";
-        titleLink.textContent = item.title;
-        titleLink.addEventListener("click", function (e) {
-          e.stopPropagation();
-        });
-        title.appendChild(titleLink);
+        if (item.webLink) {
+          var titleLink = document.createElement("a");
+          titleLink.href = item.webLink;
+          titleLink.target = "_blank";
+          titleLink.rel = "noopener noreferrer";
+          titleLink.style.color = "inherit";
+          titleLink.style.textDecoration = "none";
+          titleLink.textContent = item.title;
+          titleLink.addEventListener("click", function (e) {
+            e.stopPropagation();
+          });
+          title.appendChild(titleLink);
+        } else {
+          var titleText = document.createElement("span");
+          titleText.style.cursor = "pointer";
+          titleText.textContent = item.title;
+          titleText.addEventListener("click", function (e) {
+            e.stopPropagation();
+            openProjectModal(item);
+          });
+          title.appendChild(titleText);
+        }
 
         var desc = document.createElement("p");
         desc.textContent = item.description;
