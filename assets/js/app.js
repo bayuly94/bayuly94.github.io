@@ -409,8 +409,8 @@
     "category": "web",
     "categoryLabel": "Website",
     "platform": "Web App (Next.js & Golang)",
-    "thumbnail": "assets/images/portfolios/nexusnesia.png",
-    "fullImage": "assets/images/portfolios/nexusnesia.png",
+    "thumbnail": null,
+    "fullImage": null,
     "webLink": null,
     "playStoreLink": null,
     "appStoreLink": null,
@@ -844,6 +844,9 @@
     if (modalPlatform) {
       modalPlatform.textContent = "Platform: " + (item.platform || (item.category === "mobile" ? "Android & iOS (Mobile)" : "Web Application"));
     }
+    if (modalMedia) {
+      modalMedia.style.display = (item.thumbnail || item.fullImage) ? "" : "none";
+    }
     if (modalImage) {
       modalImage.src = item.thumbnail || "";
       modalImage.alt = item.title;
@@ -1114,10 +1117,16 @@
           img.loading = "lazy";
           thumb.appendChild(img);
         } else {
-          var placeholderLabel = document.createElement("span");
-          placeholderLabel.className = "project-placeholder-label";
-          placeholderLabel.textContent = "[Cuplikan Proyek]";
-          thumb.appendChild(placeholderLabel);
+          var placeholderBox = document.createElement("div");
+          placeholderBox.className = "project-placeholder-box";
+          placeholderBox.style.display = "flex";
+          placeholderBox.style.flexDirection = "column";
+          placeholderBox.style.alignItems = "center";
+          placeholderBox.style.justifyContent = "center";
+          placeholderBox.style.padding = "16px";
+          placeholderBox.style.height = "100%";
+          placeholderBox.innerHTML = '<svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color: var(--accent); opacity: 0.85; margin-bottom: 8px;"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg><span style="font-size: 0.82rem; font-weight: 600; color: var(--text); text-align: center;">' + item.title + '</span>';
+          thumb.appendChild(placeholderBox);
         }
         thumb.appendChild(badge);
 
