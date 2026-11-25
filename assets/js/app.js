@@ -214,6 +214,41 @@
     "link": null
   },
   {
+    "title": "Menti Scanner - UHF RFID Inventory & Asset Tracker",
+    "category": "mobile",
+    "categoryLabel": "Android Native & IoT",
+    "platform": "Android Handheld Terminal (Java Native & UHF RFID SDK)",
+    "thumbnail": "assets/images/portfolios/menti.png",
+    "fullImage": "assets/images/portfolios/menti_full.png",
+    "gallery": [
+      "assets/images/portfolios/menti.png",
+      "assets/images/portfolios/menti_1.png",
+      "assets/images/portfolios/menti_2.png"
+    ],
+    "webLink": null,
+    "playStoreLink": null,
+    "appStoreLink": null,
+    "description": "Aplikasi Android native (Java) untuk perangkat handheld RFID scanner: bulk scan inventaris multi-tag secara instan dan penulisan data tag stiker fisik.",
+    "fullDesc": "Dikembangkan pada Oktober 2025 menggunakan Android Studio dan bahasa Java native untuk perangkat handheld terminal / rugged PDA scanner. Dirancang khusus untuk efisiensi inventaris gudang dan aset fisik berskala besar: fitur bulk scanning memungkinkan pendeteksian ratusan unit barang secara bersamaan dalam satu kali pemindaian tanpa perlu scan manual satu per satu, serta modul RFID Writer untuk menulis dan meregistrasi kode identitas unik (EPC) langsung ke stiker tempel RFID.",
+    "features": [
+      "Aplikasi Native Android (Java) menggunakan Android Studio untuk perangkat Handheld Scanner PDA.",
+      "Integrasi langsung dengan Hardware SDK modul UHF RFID Scanner frekuensi industri.",
+      "Fitur Bulk Scanning: mendeteksi dan menginventarisasi seluruh barang fisik sekaligus secara instan.",
+      "Fitur RFID Tag Writer: menulis (encoding) dan meregistrasi kode EPC unik ke stiker tag RFID fisik.",
+      "Kontrol Daya Transmit (RFID Power Tuning) untuk akurasi jarak pemindaian dan registrasi tag.",
+      "Sistem validasi stock opname otomatis dengan indikator progres kuota unit barang."
+    ],
+    "tags": [
+      "Java",
+      "Android Studio",
+      "Android Native",
+      "UHF RFID",
+      "IoT & Hardware SDK",
+      "Inventory Management"
+    ],
+    "link": null
+  },
+  {
     "title": "invme.id - Digital Wedding Invitation Platform",
     "category": "web",
     "categoryLabel": "Website & Platform",
