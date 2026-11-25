@@ -139,6 +139,45 @@
     "link": "https://apps.apple.com/us/app/dealaja/id6744938650"
   },
   {
+    "title": "AsiaGolf Points & Loyalty Ecosystem",
+    "category": "mobile",
+    "categoryLabel": "Mobile & Store System",
+    "platform": "iOS, Android (Flutter) & Internal Store App",
+    "thumbnail": "assets/images/portfolios/asiagolf.png",
+    "fullImage": "assets/images/portfolios/asiagolf_full.png",
+    "gallery": [
+      "assets/images/portfolios/asiagolf.png",
+      "assets/images/portfolios/asiagolf_1.png",
+      "assets/images/portfolios/asiagolf_2.png"
+    ],
+    "webLink": null,
+    "playStoreLink": "https://play.google.com/store/apps/details?id=id.asiagolf.app&hl=id",
+    "appStoreLink": "https://apps.apple.com/us/app/asiagolf-points/id6633417013",
+    "description": "Ekosistem aplikasi mobile loyalty customer dan operasional internal AsiaGolf berbasis Flutter: membership digital, reward point, scan QR kasir, dan penukaran e-voucher.",
+    "fullDesc": "Aplikasi produksi resmi AsiaGolf (AsiaGolf Points & Internal Store Operations) di Google Play Store dan Apple App Store. Berkontribusi aktif dalam rekayasa aplikasi Flutter Customer dan Internal toko: sistem membership digital & akumulasi reward point otomatis per transaksi belanja, katalog perlengkapan golf eksklusif (Bettinardi, J.Lindeberg, dll), pemindaian QR code kasir toko untuk validasi klaim poin, penukaran e-voucher diskon & cashback belanja fisik/online, serta integrasi riwayat transaksi real-time.",
+    "features": [
+      "Rilis resmi aktif di Apple App Store dan Google Play Store.",
+      "Kontribusi pada Flutter App Customer (AsiaGolf Points) dan sistem Internal toko.",
+      "Sistem keanggotaan digital & akumulasi reward point belanja otomatis.",
+      "Katalog brand perlengkapan golf eksklusif (Bettinardi, J.Lindeberg, dll) & wishlist.",
+      "Fitur scan QR / barcode kasir toko untuk validasi transaksi & klaim promo instan.",
+      "Katalog penukaran e-voucher diskon belanja, promo cashback toko, dan online.",
+      "Pelacakan riwayat transaksi belanja real-time dan notifikasi promo khusus member."
+    ],
+    "tags": [
+      "Flutter",
+      "Dart",
+      "iOS App Store",
+      "Google Play Store",
+      "Loyalty & CRM",
+      "Retail & E-Commerce",
+      "QR Scanner",
+      "REST API"
+    ],
+    "link": "https://apps.apple.com/us/app/asiagolf-points/id6633417013"
+  },
+
+  {
     "title": "invme.id - Digital Wedding Invitation Platform",
     "category": "web",
     "categoryLabel": "Website & Platform",
@@ -1057,7 +1096,17 @@
         body.className = "project-body";
 
         var title = document.createElement("h3");
-        title.textContent = item.title;
+        var titleLink = document.createElement("a");
+        titleLink.href = item.webLink || "https://bayuly94.github.io";
+        titleLink.target = "_blank";
+        titleLink.rel = "noopener noreferrer";
+        titleLink.style.color = "inherit";
+        titleLink.style.textDecoration = "none";
+        titleLink.textContent = item.title;
+        titleLink.addEventListener("click", function (e) {
+          e.stopPropagation();
+        });
+        title.appendChild(titleLink);
 
         var desc = document.createElement("p");
         desc.textContent = item.description;
@@ -1153,9 +1202,16 @@
         var hintRow = document.createElement("div");
         hintRow.className = "project-card-footer";
         
-        var hint = document.createElement("span");
+        var hint = document.createElement("a");
         hint.className = "project-hint";
-        hint.innerHTML = "Lihat Detail &rarr;";
+        hint.href = "https://bayuly94.github.io";
+        hint.target = "_blank";
+        hint.rel = "noopener noreferrer";
+        hint.innerHTML = "Lihat Selengkapnya &rarr;";
+        hint.title = "Buka versi interaktif di https://bayuly94.github.io";
+        hint.addEventListener("click", function (e) {
+          e.stopPropagation();
+        });
         hintRow.appendChild(hint);
 
         if (cardStoreIcons.children.length > 0) {

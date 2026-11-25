@@ -1488,7 +1488,21 @@ button {
   font-size: 0.82rem;
   font-weight: 600;
   color: var(--accent);
-  transition: transform 0.2s ease;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, text-decoration 0.2s ease;
+}
+
+.project-hint:hover {
+  text-decoration: underline;
+}
+
+.project-card,
+.service-card,
+.award-banner-card,
+.timeline-item {
+  break-inside: avoid;
+  page-break-inside: avoid;
 }
 
 .project-card-footer {
