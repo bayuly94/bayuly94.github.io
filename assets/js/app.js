@@ -1247,15 +1247,15 @@
         var hintRow = document.createElement("div");
         hintRow.className = "project-card-footer";
         
-        var hint = document.createElement("a");
+        var hint = document.createElement("button");
+        hint.type = "button";
         hint.className = "project-hint";
-        hint.href = "https://bayuly94.github.io";
-        hint.target = "_blank";
-        hint.rel = "noopener noreferrer";
         hint.innerHTML = "Lihat Selengkapnya &rarr;";
-        hint.title = "Buka versi interaktif di https://bayuly94.github.io";
+        hint.title = "Buka rincian proyek " + item.title;
+        hint.setAttribute("aria-label", "Buka rincian proyek " + item.title);
         hint.addEventListener("click", function (e) {
           e.stopPropagation();
+          openProjectModal(item);
         });
         hintRow.appendChild(hint);
 

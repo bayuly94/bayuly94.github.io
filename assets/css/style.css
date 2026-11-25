@@ -1040,50 +1040,185 @@ button {
 
 /* ===== PRINT & PDF STYLES ===== */
 @media print {
-  body {
-    background: #ffffff !important;
-    color: #000000 !important;
-    font-size: 11pt;
+  html, body {
+    background-color: #000000 !important;
+    color: #f5f5f7 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
   }
 
   body::before,
   body::after,
-  .no-print {
+  .no-print,
+  .modal-backdrop,
+  .zoom-lightbox,
+  .mobile-drawer,
+  .theme-toggle,
+  .menu-toggle,
+  .skip-link,
+  .back-to-top {
     display: none !important;
   }
 
   .site-header {
-    position: static;
+    position: static !important;
     background: transparent !important;
-    border: none !important;
+    border-bottom: 0.5px solid rgba(255, 255, 255, 0.1) !important;
+    padding: 10px 0 !important;
   }
 
-  .hero-section,
-  .section {
-    padding: 16px 0 !important;
-    border-top: 1px solid #e5e5ea !important;
+  /* PAGE 1: HERO & KEformatterAHLIAN/LAYANAN DIGABUNG */
+  .hero-section {
+    padding: 16px 0 12px !important;
   }
 
-  .avatar-frame,
-  .project-card,
-  .service-card,
-  .timeline-item {
-    box-shadow: none !important;
-    border: 1px solid #e5e5ea !important;
-    background: #ffffff !important;
+  .hero-grid {
+    display: grid !important;
+    grid-template-columns: 1fr auto !important;
+    align-items: center !important;
+    gap: 20px !important;
+    text-align: left !important;
   }
 
-  .timeline-period,
-  .tech-pill,
+  .hero-visual {
+    order: 2 !important;
+    display: flex !important;
+    justify-content: center !important;
+  }
+
+  .avatar-frame {
+    width: 135px !important;
+    height: 135px !important;
+    border-radius: 28px !important;
+    padding: 4px !important;
+  }
+
+  .hero-content h1 {
+    font-size: 1.6rem !important;
+    margin: 4px 0 6px !important;
+  }
+
+  .hero-title {
+    font-size: 0.95rem !important;
+    margin-bottom: 8px !important;
+  }
+
+  .hero-desc {
+    font-size: 0.8rem !important;
+    line-height: 1.4 !important;
+    margin-bottom: 10px !important;
+  }
+
+  .tech-pills {
+    gap: 5px !important;
+    margin-bottom: 12px !important;
+    justify-content: flex-start !important;
+  }
+
+  .tech-pill {
+    font-size: 0.72rem !important;
+    padding: 3px 8px !important;
+  }
+
+  .hero-cta-group {
+    gap: 8px !important;
+    justify-content: flex-start !important;
+  }
+
+  .hero-cta-group .btn {
+    padding: 6px 14px !important;
+    font-size: 0.78rem !important;
+  }
+
+  #services {
+    padding: 12px 0 14px !important;
+    border-top: 0.5px solid rgba(255, 255, 255, 0.1) !important;
+    break-after: page !important;
+    page-break-after: always !important;
+  }
+
+  #services .section-header {
+    margin-bottom: 10px !important;
+    text-align: left !important;
+  }
+
+  #services .section-kicker {
+    font-size: 0.72rem !important;
+    margin-bottom: 2px !important;
+  }
+
+  #services .section-title {
+    font-size: 1.25rem !important;
+    margin-bottom: 4px !important;
+  }
+
+  #services .section-desc {
+    font-size: 0.8rem !important;
+    line-height: 1.35 !important;
+    margin-bottom: 0 !important;
+  }
+
+  .services-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 12px !important;
+  }
+
+  .service-card {
+    padding: 14px 14px !important;
+    border-radius: 16px !important;
+    background: #1c1c1e !important;
+    border: 0.5px solid rgba(255, 255, 255, 0.12) !important;
+    break-inside: avoid !important;
+  }
+
+  .service-meta {
+    font-size: 0.7rem !important;
+    margin-bottom: 4px !important;
+  }
+
+  .service-card h3 {
+    font-size: 0.92rem !important;
+    margin-bottom: 6px !important;
+  }
+
+  .service-card p {
+    font-size: 0.76rem !important;
+    line-height: 1.35 !important;
+    margin-bottom: 8px !important;
+  }
+
+  .tag-list {
+    gap: 4px !important;
+    margin-top: auto !important;
+  }
+
   .tag-list li {
-    background: #f2f2f7 !important;
-    color: #000000 !important;
-    border: 1px solid #d1d1d6 !important;
+    font-size: 0.68rem !important;
+    padding: 2px 6px !important;
+    border-radius: 6px !important;
+    background: rgba(255, 255, 255, 0.08) !important;
+    color: #e5e5ea !important;
+    border: 0.5px solid rgba(255, 255, 255, 0.12) !important;
   }
-}
 
-.pdf-exporting body {
-  background-color: #000000 !important;
+  /* PAGE 2: PORTOFOLIO */
+  #portfolio {
+    break-before: page !important;
+    page-break-before: always !important;
+    padding-top: 16px !important;
+  }
+
+  .portfolio-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 16px !important;
+  }
+
+  .project-card {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
 }
 
 /* ===== iOS PROJECT DETAIL MODAL SHEET ===== */
@@ -1488,6 +1623,10 @@ button {
   font-size: 0.82rem;
   font-weight: 600;
   color: var(--accent);
+  background: transparent;
+  border: none;
+  padding: 0;
+  font-family: inherit;
   text-decoration: none;
   cursor: pointer;
   transition: transform 0.2s ease, text-decoration 0.2s ease;
