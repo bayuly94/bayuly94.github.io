@@ -535,8 +535,8 @@
   {
     "title": "MAKE (Makan Kenyang)",
     "category": "web",
-    "categoryLabel": "Website & Web Platform",
-    "platform": "Full Stack (Web & Mobile API)",
+    "categoryLabel": "Mobile & Web Platform",
+    "platform": "Mobile (Flutter) & Web Backend (Laravel)",
     "thumbnail": "assets/images/portfolios/make.png",
     "fullImage": "assets/images/portfolios/make_full.png",
     "gallery": [
@@ -548,19 +548,19 @@
     "webLink": null,
     "playStoreLink": null,
     "appStoreLink": null,
-    "description": "Platform pemetaan titik lokasi pembagian makanan gratis berbasis OpenStreetMap dengan kontribusi publik, navigasi rute, dan validasi admin.",
-    "fullDesc": "Inisiatif sosial digital yang memetakan lokasi penyediaan dan pembagian makanan gratis bagi masyarakat yang membutuhkan. Mengintegrasikan teknologi OpenStreetMap untuk menampilkan radius lokasi titik sedekah makan di berbagai wilayah.",
+    "description": "Platform pemetaan titik lokasi pembagian makanan gratis berbasis Flutter dan Laravel dengan integrasi OpenStreetMap, kontribusi publik, navigasi rute, dan validasi admin.",
+    "fullDesc": "Inisiatif sosial digital yang dibangun menggunakan Flutter untuk aplikasi mobile dan Laravel untuk backend REST API serta dashboard admin web. Memetakan lokasi penyediaan dan pembagian makanan gratis bagi masyarakat yang membutuhkan dengan mengintegrasikan OpenStreetMap untuk menampilkan radius titik sedekah makan di berbagai wilayah.",
     "features": [
-      "Integrasi peta OpenStreetMap interaktif dengan pin penanda lokasi real-time.",
+      "Aplikasi mobile berbasis Flutter dengan integrasi peta OpenStreetMap interaktif dan pin penanda lokasi real-time.",
+      "Backend REST API dan dashboard admin berbasis Laravel untuk kurasi, verifikasi, serta validasi keaktifan lokasi makan gratis.",
       "Formulir saran kontribusi masyarakat untuk mendaftarkan titik sedekah baru.",
-      "Dashboard admin untuk kurasi, verifikasi, dan validasi keaktifan lokasi makan gratis.",
       "Panduan rute navigasi dari posisi pengguna ke lokasi pembagian terdekat.",
       "Antarmuka ringan, ramah kuota, dan mudah diakses dari perangkat mobile."
     ],
     "tags": [
-      "Fullstack",
+      "Flutter",
+      "Laravel",
       "OpenStreetMap",
-      "Leaflet JS",
       "PHP",
       "REST API"
     ],
